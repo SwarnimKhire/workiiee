@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sunday/utils/colors.dart';
 import 'package:sunday/utils/texts.dart';
+import 'package:sunday/widgets/bnb.dart';
 import 'package:sunday/widgets/challenge.dart';
 import 'package:sunday/widgets/precard.dart';
 
@@ -9,6 +10,7 @@ class Workout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int selectedIndex = 2;
     return Scaffold(
       backgroundColor: const Color(0xffF7F6FA),
       body: Column(
@@ -109,6 +111,7 @@ class Workout extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: bnB(selectedIndex: selectedIndex),
     );
   }
 }
